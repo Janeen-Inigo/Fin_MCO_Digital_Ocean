@@ -1,5 +1,0 @@
-Campus Voting Contract
-
-Network: Sepolia Testnet
-
-Contract Address: 0xA4da02b7023dc08BB0f31a613d9527408444301c
