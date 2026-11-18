@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Election Results</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Campus Voting System</h1>
+    <p>Election Results</p>
+</header>
+
+<main>
+    <section>
+        <h2>Election Status</h2>
+        <p id="electionStatus">Loading election status...</p>
+    </section>
+
+    <section>
+        <h2>Election Summary</h2>
+        <p id="totalVotes">Total Votes: Loading...</p>
+    </section>
+
+    <section>
+        <h2>Candidate Results</h2>
+        <div id="resultsList">
+            Loading candidates...
+        </div>
+
+        <button id="refreshButton" type="button">
+            Refresh Results
+        </button>
+    </section>
+
+    <p>
+        <a href="index.html">Back to Home</a>
+    </p>
+</main>
+
+<footer>
+    <p>Campus Voting System | Blockchain Project</p>
+    <p>Powered by Ethereum Smart Contract</p>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/5.7.2/ethers.umd.min.js"></script>
+<script src="results.js"></script>
+
+</body>
+</html>

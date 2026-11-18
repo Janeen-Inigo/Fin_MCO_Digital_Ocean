@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIGITAL OCEAN</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="voter-page">
+
+<header>
+    <div class="logo">DIGITAL OCEAN</div>
+    <p>Decentralized Campus Voting System</p>
+</header>
+
+<main class="container">
+
+    <!-- WALLET CONNECTION -->
+    <section class="card">
+        <h2>Connect Wallet</h2>
+        <p>Connect your authorized MetaMask wallet first.</p>
+
+        <button type="button" id="connectButton">
+            Connect MetaMask Wallet
+        </button>
+
+        <p id="walletStatus">Wallet not connected.</p>
+    </section>
+
+    <!-- REGISTRATION -->
+    <section id="registrationSection" class="card">
+        <h2>Voter Registration</h2>
+        <p>Register your information to participate in the election.</p>
+
+        <form id="registrationForm">
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName"
+                   placeholder="Enter your full name" required>
+
+            <label for="studentId">Student ID</label>
+            <input type="text" id="studentId"
+                   placeholder="Enter your student ID" required>
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email"
+                   placeholder="Enter your email" required>
+
+            <button type="submit">Register</button>
+        </form>
+
+        <p id="registrationMessage"></p>
+
+        <p>Already registered?
+            <a href="#" id="showLogin">Login here</a>
+        </p>
+    </section>
+
+    <!-- LOGIN -->
+    <section id="loginSection" class="card" hidden>
+        <h2>Voter Login</h2>
+        <p>Your connected wallet will be used to verify your account.</p>
+
+        <p id="loginWalletStatus">Wallet not connected.</p>
+
+        <button type="button" id="loginButton" disabled>
+            Login
+        </button>
+
+        <p id="loginMessage"></p>
+
+        <p>Don't have an account?
+            <a href="#" id="showRegistration">Register here</a>
+        </p>
+    </section>
+
+    <!-- VOTER DASHBOARD -->
+    <section id="dashboardSection" hidden>
+
+        <div class="card">
+            <h2>Voter Dashboard</h2>
+            <p>Welcome, <span id="displayName">Voter</span>!</p>
+            <p id="displayStudentId"></p>
+            <p id="electionStatus">Election status: Checking...</p>
+            <p id="totalVotes">Total votes: 0</p>
+
+            <button type="button" id="logoutButton">Logout</button>
+        </div>
+
+        <section class="card">
+            <h2>List of Candidates</h2>
+            <p>Review the candidates before choosing your vote.</p>
+
+            <div id="candidateList">
+                <p>Loading candidates...</p>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Voting Information</h2>
+            <p id="votingMessage">
+                Select a candidate to cast your vote.
+            </p>
+            <p id="voterStatus">Voter status: Not checked</p>
+        </section>
+
+    </section>
+
+    <p><a href="index.html">Back to Home</a></p>
+
+</main>
+
+<footer>
+    <p>© 2026 DIGITAL OCEAN | Campus Voting dApp</p>
+    <p>Powered by Blockchain Technology</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+<script src="voter.js" defer></script>
+
+</body>
+</html>

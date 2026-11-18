@@ -1,0 +1,159 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6fa;
+    color: #333;
+}
+
+header {
+    background: #172554;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+header h1 {
+    margin-bottom: 8px;
+}
+
+main {
+    width: 90%;
+    max-width: 1000px;
+    margin: 30px auto;
+}
+
+section {
+    background: white;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+h2 {
+    color: #172554;
+    margin-bottom: 20px;
+}
+
+h3 {
+    margin: 20px 0 12px;
+}
+
+.admin-panel {
+    display: none;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 11px 18px;
+    margin: 8px 5px 8px 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+.candidate {
+    background: #f1f5f9;
+    padding: 15px;
+    margin: 12px 0;
+    border-radius: 6px;
+}
+
+#electionStatus,
+#totalVotes {
+    margin-top: 12px;
+    font-weight: bold;
+}
+
+.candidate {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+footer {
+    background: #172554;
+    color: white;
+    text-align: center;
+    padding: 18px;
+    margin-top: 30px;
+}
+
+.dashboard-options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.option {
+    background: #f8fafc;
+    border: 1px solid #dbe3ef;
+    padding: 30px;
+    text-align: center;
+    border-radius: 14px;
+    transition: 0.3s ease;
+}
+
+.option:last-child {
+    grid-column: 1 / -1;
+}
+
+.option:hover,
+.option:focus-within {
+    border-color: #3157d5;
+    box-shadow: 0 3px 15px rgba(49, 87, 213, 0.25);
+}
+
+.option p {
+    margin-bottom: 15px;
+}
+
+/* MOBILE */
+@media (max-width: 700px) {
+    .dashboard-options {
+        grid-template-columns: 1fr;
+    }
+
+    .option:last-child {
+        grid-column: auto;
+    }
+}
+
+
+/* DASHBOARD BUTTON SIZE */
+.option button {
+    min-width: 115px;
+    padding: 14px 30px;
+    font-size: 17px;
+    border-radius: 7px;
+}
+
